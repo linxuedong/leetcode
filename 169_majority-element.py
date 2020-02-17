@@ -75,8 +75,6 @@ class Solution:
             right_count = sum(1 for i in range(lo, hi+1) if nums[i] == right)
             return left if left_count > right_count else right
 
-            
-
         return majority_element_rec(0, len(nums)-1)
 
 
