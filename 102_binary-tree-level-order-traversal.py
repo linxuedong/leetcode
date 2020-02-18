@@ -8,10 +8,7 @@ class TreeNode:
 
 class Solution:
     def levelOrder(self, root: TreeNode):
-        """ 广度优先递归法 """
-        levels = []
-        if not root: return levels
-
+        """ 深度优先递归法 """
         def helper(node, level):
             if level == len(levels):
                 levels.append([])
@@ -23,6 +20,8 @@ class Solution:
             if node.right:
                 helper(node.right, level+1)
 
+        levels = []
+        if not root: return levels
         helper(root, 0)
         return levels
 
