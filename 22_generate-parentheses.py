@@ -8,7 +8,8 @@ class Solution:
     def helper(self, left, right, n, result):
         if left == n and right == n:
             self.list.append(result)
-        
+            return
+            
         if left < n:
             self.helper(left+1, right, n, result + '(')
 
