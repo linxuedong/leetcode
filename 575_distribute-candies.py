@@ -13,3 +13,8 @@ class Solution:
             return candies_type_num
         else:
             return get_candies_num
+
+    def distributeCandies1(self, candies]) -> int:
+        candies_type = set(candies)
+        get_candies_num = len(candies) // 2
+        return min(len(candies_type), get_candies_num)
